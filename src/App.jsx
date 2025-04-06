@@ -1,20 +1,117 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Layout, Menu, Drawer, Button } from "antd";
+import { MenuOutlined } from "@ant-design/icons";
+import { useState } from "react";
+import LINKS from "./constants";
+import { About, Me } from "./sections";
 import "./App.css";
 
+const { Header, Content, Footer } = Layout;
+
 function App() {
+  const [drawerVisible, setDrawerVisible] = useState(false);
+
+  const menuItems = [
+    { key: "me", label: "Me", component: <Me /> },
+    { key: "about", label: "About", component: <About /> },
+    { key: "education", label: "Education" },
+    { key: "experience", label: "Experience" },
+    { key: "skills", label: "Skills" },
+    {
+      key: "resume",
+      label: "Resume",
+      external: true,
+      url: LINKS.resume,
+    },
+  ];
+
+  const handleMenuClick = ({ key }) => {
+    const item = menuItems.find((i) => i.key === key);
+    if (item.external) {
+      window.open(item.url, "_blank");
+    } else {
+      const section = document.getElementById(key);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setDrawerVisible(false);
+  };
+
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-    </>
+    <Layout style={{ minHeight: "100vh" }}>
+      <Header
+        style={{
+          position: "fixed",
+          width: "100%",
+          zIndex: 1000,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "0 20px",
+        }}
+      >
+        <div style={{ color: "#fff", fontWeight: "bold", fontSize: "18px" }}>
+          My Portfolio
+        </div>
+
+        <div className="desktop-menu">
+          <Menu
+            theme="dark"
+            mode="horizontal"
+            items={menuItems.map(({ key, label }) => ({ key, label }))}
+            onClick={handleMenuClick}
+          />
+        </div>
+
+        <div className="mobile-menu-icon">
+          <Button
+            icon={<MenuOutlined />}
+            type="text"
+            style={{ color: "#fff" }}
+            onClick={() => setDrawerVisible(true)}
+          />
+        </div>
+
+        <Drawer
+          title="Menu"
+          placement="right"
+          onClose={() => setDrawerVisible(false)}
+          open={drawerVisible}
+        >
+          <Menu
+            mode="vertical"
+            items={menuItems.map(({ key, label }) => ({ key, label }))}
+            onClick={handleMenuClick}
+          />
+        </Drawer>
+      </Header>
+
+      <Content style={{ paddingTop: 64 }}>
+        {menuItems
+          .filter((item) => !item.external)
+          .map(({ key, label }) => (
+            <div
+              id={key}
+              key={key}
+              style={{
+                minHeight: "100vh",
+                padding: "20px",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* Replace this with your actual section component */}
+              <h1>{label} Section</h1>
+            </div>
+          ))}
+      </Content>
+
+      <Footer style={{ textAlign: "center" }}>
+        © 2025 Your Name. All Rights Reserved.
+      </Footer>
+    </Layout>
   );
 }
 
