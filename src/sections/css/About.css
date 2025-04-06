@@ -1,0 +1,131 @@
+/* Container for the About section */
+.about-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for the title */
+.about-title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Desktop Layout */
+.desktop-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+
+.desktop-description {
+  text-align: left;
+  padding: 30px;
+  width: 50%;
+  line-height: 1.6;
+}
+
+.desktop-image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.desktop-image img {
+  width: 60%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Mobile Layout */
+.mobile-layout {
+  display: none;
+}
+
+.mobile-image {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.mobile-description {
+  padding: 10px;
+  text-align: left;
+}
+
+.mobile-description h3 {
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.mobile-image img {
+  width: 80%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 767px) {
+  .desktop-layout {
+    display: none;
+  }
+
+  .mobile-layout {
+    display: block;
+  }
+}
+
+/* Media Query for Desktop */
+@media screen and (min-width: 768px) {
+  .mobile-layout {
+    display: none;
+  }
+
+  .desktop-layout {
+    display: flex;
+    gap: 10px;
+  }
+
+  .desktop-description h3 {
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+
+  .desktop-image img {
+    width: 75%;
+  }
+
+  .about-title {
+    font-size: 3em;
+    margin-bottom: 20px;
+  }
+
+  .desktop-description {
+    margin-left: 30px;
+  }
+}
+
+/* Optional: Media Query for very large screens */
+@media screen and (min-width: 1200px) {
+  .desktop-description h3 {
+    font-size: 1.5em;
+    line-height: 1.4;
+    width: 110%;
+  }
+
+  .desktop-image img {
+    width: 55%;
+  }
+
+  /* Left margin for the description on larger screens */
+  .desktop-description {
+    margin-left: 50px;
+  }
+
+  .about-title {
+    font-size: 3.5em;
+    margin-bottom: 60px;
+  }
+}
