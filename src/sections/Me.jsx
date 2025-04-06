@@ -1,4 +1,4 @@
-import "../App.css";
+import "./css/Me.css";
 import React from "react";
 import { BIO } from "../constants";
 import Typewriter from "typewriter-effect";
