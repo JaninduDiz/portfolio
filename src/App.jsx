@@ -4,6 +4,7 @@ import { useState } from "react";
 import LINKS from "./constants";
 import { About, Me, Skills, Education, Experience } from "./sections";
 import "./App.css";
+import Logo from "/logo.png";
 
 const { Header, Content, Footer } = Layout;
 
@@ -50,8 +51,10 @@ function App() {
           padding: "0 20px",
         }}
       >
-        <div style={{ color: "#fff", fontWeight: "bold", fontSize: "18px" }}>
-          My Portfolio
+        <div style={{ alignItems: "center", display: "flex" }}>
+          <a href="/" style={{ display: "flex", alignItems: "center" }}>
+            <img src={Logo} alt="Logo" style={{ width: "40px" }} />
+          </a>
         </div>
 
         <div className="desktop-menu">
@@ -86,7 +89,7 @@ function App() {
         </Drawer>
       </Header>
 
-      <Content style={{ paddingTop: 64 }}>
+      <Content>
         {menuItems
           .filter((item) => !item.external)
           .map(({ key, component }) => (
