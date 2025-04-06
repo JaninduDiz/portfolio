@@ -29,7 +29,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      # Deploy to github pages
+      # Deploy to Github pages
       - name: Deploy to github pages
         uses: peaceiris/actions-gh-pages@v3
         with:
