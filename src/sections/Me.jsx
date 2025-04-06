@@ -1,37 +1,12 @@
 import React from "react";
+import { BIO } from "../constants";
 import Typewriter from "typewriter-effect";
 import { SocialIcon } from "react-social-icons";
-
-const data = {
-  name: "Janindu Dissanayake",
-  roles: [
-    "a Software Engineer",
-    "a Freelancer",
-    "a Web Developer",
-    "a Mobile Developer",
-    "a Full Stack Developer",
-    "a Frontend Developer",
-  ],
-  social: [
-    {
-      network: "linkedin",
-      href: "https://www.linkedin.com/in/janindu-dissanayake/",
-    },
-    {
-      network: "github",
-      href: "https://github.com/JaninduDiz",
-    },
-    {
-      network: "email",
-      href: "mailto:janindu001@gmail.com",
-    },
-  ],
-};
 
 function Me() {
   return (
     <div style={styles.mainContainer}>
-      <h1 style={styles.nameStyle}>{data?.name}</h1>
+      <h1 style={styles.nameStyle}>{BIO?.name}</h1>
       <div
         style={{ display: "flex", flexDirection: "row", alignItems: "center" }}
       >
@@ -41,15 +16,15 @@ function Me() {
             options={{
               loop: true,
               autoStart: true,
-              strings: data?.roles,
+              strings: BIO?.roles,
             }}
           />
         </h2>
       </div>
 
       <div className="social">
-        {data
-          ? data.social.map((social) => (
+        {BIO
+          ? BIO.social.map((social) => (
               <SocialIcon
                 key={social.network}
                 style={styles.iconStyle}

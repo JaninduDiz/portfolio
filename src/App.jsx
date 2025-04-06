@@ -1,7 +1,7 @@
 import { Layout, Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
-import LINKS from "./constants";
+import { LINKS } from "./constants";
 import { About, Me, Skills, Education, Experience } from "./sections";
 import "./App.css";
 import Logo from "/logo.png";
@@ -52,9 +52,12 @@ function App() {
         }}
       >
         <div style={{ alignItems: "center", display: "flex" }}>
-          <a href="/" style={{ display: "flex", alignItems: "center" }}>
+          <div
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            style={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+          >
             <img src={Logo} alt="Logo" style={{ width: "40px" }} />
-          </a>
+          </div>
         </div>
 
         <div className="desktop-menu">
@@ -111,7 +114,7 @@ function App() {
       </Content>
 
       <Footer style={{ textAlign: "center" }}>
-        © 2025 Your Name. All Rights Reserved.
+        © 2025 Janindu Dissanayake. All Rights Reserved.
       </Footer>
     </Layout>
   );
