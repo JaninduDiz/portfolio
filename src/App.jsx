@@ -2,7 +2,7 @@ import { Layout, Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState } from "react";
 import LINKS from "./constants";
-import { About, Me } from "./sections";
+import { About, Me, Skills, Education, Experience } from "./sections";
 import "./App.css";
 
 const { Header, Content, Footer } = Layout;
@@ -13,9 +13,9 @@ function App() {
   const menuItems = [
     { key: "me", label: "Me", component: <Me /> },
     { key: "about", label: "About", component: <About /> },
-    { key: "education", label: "Education" },
-    { key: "experience", label: "Experience" },
-    { key: "skills", label: "Skills" },
+    { key: "education", label: "Education", component: <Education /> },
+    { key: "experience", label: "Experience", component: <Experience /> },
+    { key: "skills", label: "Skills", component: <Skills /> },
     {
       key: "resume",
       label: "Resume",
@@ -89,7 +89,7 @@ function App() {
       <Content style={{ paddingTop: 64 }}>
         {menuItems
           .filter((item) => !item.external)
-          .map(({ key, label }) => (
+          .map(({ key, component }) => (
             <div
               id={key}
               key={key}
@@ -102,8 +102,7 @@ function App() {
                 alignItems: "center",
               }}
             >
-              {/* Replace this with your actual section component */}
-              <h1>{label} Section</h1>
+              {component}
             </div>
           ))}
       </Content>
