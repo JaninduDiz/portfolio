@@ -1,5 +1,5 @@
 import React from "react";
-// import Typewriter from "typewriter-effect";
+import Typewriter from "typewriter-effect";
 import { SocialIcon } from "react-social-icons";
 
 const data = {
@@ -37,13 +37,13 @@ function Me() {
       >
         <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
         <h2 style={styles.inlineChild}>
-          {/* <Typewriter
+          <Typewriter
             options={{
               loop: true,
               autoStart: true,
               strings: data?.roles,
             }}
-          /> */}
+          />
         </h2>
       </div>
 
