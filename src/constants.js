@@ -1,3 +1,5 @@
+import CodeScale from './assets/about/codescale.svg'
+
 const LINKS = {
     resume: "https://drive.google.com/file/d/1iJi_IuHHX1OXqRAm-qVPAjYZq7aE7o0G/view?usp=sharing",
 
@@ -29,4 +31,28 @@ const BIO = {
     ],
 };
 
-export { BIO, LINKS };
+const EXPERIENCES = [
+    {
+        title: "Associate Software Engineer",
+        subtitle: "CodeScale Pvt Ltd, Sri Lanka",
+        workDescription: [
+            "Developed the official apps for the startup for both Android and iOS using hybrid framework. Worked on backend integrations and implemented new features.",
+        ],
+        dateText: "05/2024 – 02/2025",
+        icon: CodeScale,
+        bgColor: "rgb(233, 30, 99)"
+    },
+    {
+        title: "Software Engineer",
+        subtitle: "CodeScale Pvt Ltd, Sri Lanka",
+        workDescription: [
+            "Developed full-stack solutions and integrated APIs. Collaborated in agile sprints with team members for app releases.",
+        ],
+        dateText: "10/2023 – 04/2024",
+        icon: CodeScale,
+        bgColor: "rgb(33, 150, 243)"
+    },
+
+];
+
+export { BIO, LINKS, EXPERIENCES };
