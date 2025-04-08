@@ -43,7 +43,7 @@ const EXPERIENCES = [
         ],
         dateText: "05/2024 – 02/2025",
         icon: CodeScale,
-        bgColor: "rgb(233, 30, 99)"
+        bgColor: "rgb(52, 56, 72)"
     },
     {
         title: "Intern - Software Engineer",
@@ -54,7 +54,7 @@ const EXPERIENCES = [
         ],
         dateText: "10/2023 – 04/2024",
         icon: CodeScale,
-        bgColor: "rgb(33, 150, 243)"
+        bgColor: "rgb(33, 83, 124)"
     },
 
 ];
@@ -66,7 +66,7 @@ const EDUCATION = [
         workDescription: ["Graduated with Honours", "Specialized in Software Engineering"],
         dateText: "2021 – 2024",
         icon: SLIIT,
-        bgColor: "#E91E63",
+        bgColor: "rgb(33, 83, 124)"
     },
     {
         title: "GCE A/L - Physical Stream",
@@ -74,7 +74,7 @@ const EDUCATION = [
         workDescription: ["Combined Maths, Physics, ICT"],
         dateText: "2007 – 2020",
         icon: Dharmaraja,
-        bgColor: "#E91E63",
+        bgColor: "rgb(52, 56, 72)"
     },
 ];
 

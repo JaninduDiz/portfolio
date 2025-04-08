@@ -15,14 +15,13 @@
   gap: 60px;
   align-items: flex-start;
   width: 100%;
-  max-width: 1400px; /* Increase total width */
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .timeline-section {
   flex: 1;
-  max-width: 800px; /* Allow more width per column */
+  max-width: 800px;
 }
 
 .section-title {
@@ -62,11 +61,39 @@
   color: #000;
 }
 
+/* TABLET VIEW */
+@media screen and (max-width: 1024px) {
+  .experiences-title {
+    font-size: 2em;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .vertical-timeline-element-title {
+    font-size: 1.3em;
+  }
+
+  .vertical-timeline-element-subtitle {
+    font-size: 1.1em;
+  }
+
+  .vertical-timeline-element-description {
+    font-size: 0.95em;
+  }
+
+  .date-text {
+    font-size: 1.2em;
+  }
+}
+
 /* MOBILE VIEW */
 @media screen and (max-width: 768px) {
   .timeline-columns {
     flex-direction: column;
     max-width: 100%;
+    gap: 40px;
   }
 
   .timeline-section {
@@ -74,7 +101,56 @@
     margin-bottom: 40px;
   }
 
+  .experiences-title {
+    font-size: 1.8em;
+  }
+
   .section-title {
+    font-size: 1.4em;
+  }
+
+  .vertical-timeline-element-title {
+    font-size: 1.2em;
+  }
+
+  .vertical-timeline-element-subtitle {
+    font-size: 1em;
+  }
+
+  .vertical-timeline-element-description {
+    font-size: 0.9em;
+    padding-left: 15px;
+  }
+
+  .date-text {
+    font-size: 1em;
+  }
+}
+
+/* EXTRA SMALL MOBILE VIEW */
+@media screen and (max-width: 480px) {
+  .experiences-title {
     font-size: 1.5em;
+  }
+
+  .section-title {
+    font-size: 1.2em;
+  }
+
+  .vertical-timeline-element-title {
+    font-size: 1em;
+  }
+
+  .vertical-timeline-element-subtitle {
+    font-size: 0.9em;
+  }
+
+  .vertical-timeline-element-description {
+    font-size: 0.85em;
+    padding-left: 10px;
+  }
+
+  .date-text {
+    font-size: 0.9em;
   }
 }

@@ -70,7 +70,7 @@ function MyJourney() {
                 key={index}
                 className="vertical-timeline-element custom-timeline-box"
                 iconStyle={{
-                  background: education.bgColor,
+                  background: "rgb(63, 60, 43)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -96,7 +96,10 @@ function MyJourney() {
                   {education.title}
                 </h3>
                 <h4 className="vertical-timeline-element-subtitle">
-                  {`${education.subtitle} (${education.dateText})`}
+                  <>
+                    {education.subtitle}
+                    <br />({education.dateText})
+                  </>
                 </h4>
                 <ul className="vertical-timeline-element-description">
                   {education.workDescription.map((desc, idx) => (
