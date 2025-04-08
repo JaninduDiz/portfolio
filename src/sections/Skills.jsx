@@ -1,7 +1,6 @@
 import React from "react";
 import "./css/Skills.css";
 import { SKILLS } from "../constants";
-import ReactMarkdown from "react-markdown";
 
 const styles = {
   iconStyle: {
@@ -10,16 +9,9 @@ const styles = {
     margin: 10,
     marginBottom: 0,
   },
-  introTextContainer: {
-    whiteSpace: "pre-wrap",
-  },
 };
 
-const renderSkillsIntro = (intro) => (
-  <h4 style={styles.introTextContainer}>
-    <ReactMarkdown children={intro} />
-  </h4>
-);
+const renderSkillsIntro = (intro) => <h4 className="skills-intro">{intro}</h4>;
 
 function Skills() {
   return (
