@@ -1,4 +1,6 @@
-import CodeScale from './assets/about/codescale.svg'
+import CodeScale from './assets/experience-education/codescale.svg'
+import Dharmaraja from './assets/experience-education/dharmaraja.svg'
+import SLIIT from './assets/experience-education/sliit-logo.svg'
 
 const LINKS = {
     resume: "https://drive.google.com/file/d/1iJi_IuHHX1OXqRAm-qVPAjYZq7aE7o0G/view?usp=sharing",
@@ -36,17 +38,19 @@ const EXPERIENCES = [
         title: "Associate Software Engineer",
         subtitle: "CodeScale Pvt Ltd, Sri Lanka",
         workDescription: [
-            "Developed the official apps for the startup for both Android and iOS using hybrid framework. Worked on backend integrations and implemented new features.",
+            "Developed responsive front-end web and mobile applications using React, React Native, and iOS technologies",
+            "Collaborated effectively in a remote, agile work environment with cross-functional team members"
         ],
         dateText: "05/2024 – 02/2025",
         icon: CodeScale,
         bgColor: "rgb(233, 30, 99)"
     },
     {
-        title: "Software Engineer",
+        title: "Intern - Software Engineer",
         subtitle: "CodeScale Pvt Ltd, Sri Lanka",
         workDescription: [
-            "Developed full-stack solutions and integrated APIs. Collaborated in agile sprints with team members for app releases.",
+            "Developed front-end web and mobile applications and integrated APIs",
+            "Collaborated in agile sprints with team members",
         ],
         dateText: "10/2023 – 04/2024",
         icon: CodeScale,
@@ -55,4 +59,23 @@ const EXPERIENCES = [
 
 ];
 
-export { BIO, LINKS, EXPERIENCES };
+const EDUCATION = [
+    {
+        title: "BSc (Hons) in Information Technology ",
+        subtitle: "Sri Lanka Institute of Information Technology ",
+        workDescription: ["Graduated with Honours", "Specialized in Software Engineering"],
+        dateText: "2021 – 2024",
+        icon: SLIIT,
+        bgColor: "#E91E63",
+    },
+    {
+        title: "GCE A/L - Physical Stream",
+        subtitle: "Dharmaraja College, Kandy",
+        workDescription: ["Combined Maths, Physics, ICT"],
+        dateText: "2007 – 2020",
+        icon: Dharmaraja,
+        bgColor: "#E91E63",
+    },
+];
+
+export { BIO, LINKS, EXPERIENCES, EDUCATION };
