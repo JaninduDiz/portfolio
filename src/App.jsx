@@ -2,7 +2,7 @@ import { Layout, Menu, Drawer, Button } from "antd";
 import { MenuOutlined } from "@ant-design/icons";
 import { useState, useEffect } from "react";
 import { LINKS } from "./constants";
-import { About, Me, Skills, Education, Experience } from "./sections";
+import { About, Me, Skills, MyJourney } from "./sections";
 import "./App.css";
 import Logo from "/logo.png";
 
@@ -15,9 +15,8 @@ function App() {
   const menuItems = [
     { key: "me", label: "Me", component: <Me /> },
     { key: "about", label: "About", component: <About /> },
-    { key: "experience", label: "Experience", component: <Experience /> },
+    { key: "journey", label: "My Journey", component: <MyJourney /> },
     { key: "skills", label: "Skills", component: <Skills /> },
-    { key: "education", label: "Education", component: <Education /> },
     {
       key: "resume",
       label: "Resume",
