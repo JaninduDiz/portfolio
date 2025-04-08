@@ -78,4 +78,94 @@ const EDUCATION = [
     },
 ];
 
-export { BIO, LINKS, EXPERIENCES, EDUCATION };
+const SKILLS =
+{
+    intro: "I love to learn new things and experiment with new technologies.\nThese are some of the major languages, technologies, tools and platforms I have worked with:",
+    skills: [{
+
+        title: "Languages & Databases",
+        items: [
+            {
+                icon: "images/skills/js.png",
+                title: "JavaScript"
+            },
+            {
+                icon: "images/skills/typescript.png",
+                title: "Typescript"
+            },
+            {
+                icon: "images/skills/swift.png",
+                title: "Swift"
+            },
+            {
+                icon: "images/skills/kotlin.jpeg",
+                title: "Kotlin"
+            },
+            {
+                icon: "images/skills/python.png",
+                title: "Python"
+            },
+            {
+                icon: "images/skills/mongo-db.png",
+                title: "MongoDB"
+            },
+            {
+                icon: "images/skills/mysql.png",
+                title: "MySQL"
+            }
+        ]
+    },
+    {
+        title: "Frameworks & Technologies",
+        items: [
+            {
+                icon: "images/skills/react.png",
+                title: "React"
+            },
+            {
+                icon: "images/skills/react-native.png",
+                title: "React Native"
+            },
+            {
+                icon: "images/skills/android_new.png",
+                title: "Android"
+            },
+            {
+                icon: "images/skills/nodejs.png",
+                title: "Nodejs"
+            },
+            {
+                icon: "images/skills/redux.png",
+                title: "Redux"
+            }
+        ]
+    },
+    {
+        title: "Tools & Platforms",
+        items: [
+            {
+                icon: "images/skills/vscode.png",
+                title: "VS Code"
+            },
+            {
+                icon: "images/skills/xcode.png",
+                title: "Xcode"
+            },
+            {
+                icon: "images/skills/android-studio.png",
+                title: "Android Studio"
+            },
+            {
+                icon: "images/skills/git.png",
+                title: "Git"
+            },
+            {
+                icon: "images/skills/firebase.png",
+                title: "Firebase"
+            }
+        ]
+    }
+    ]
+}
+
+export { BIO, LINKS, EXPERIENCES, EDUCATION, SKILLS };

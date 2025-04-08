@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { LINKS } from "./constants";
 import { About, Me, Skills, MyJourney } from "./sections";
 import "./App.css";
-import Logo from "/logo.png";
+import Logo from "/images/logo.png";
 
 const { Header, Content, Footer } = Layout;
 
