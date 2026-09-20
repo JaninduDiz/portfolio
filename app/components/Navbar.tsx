@@ -28,12 +28,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <div
-              className="flex-shrink-0 cursor-pointer"
+            <button
+              className="flex-shrink-0 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-md p-1"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              aria-label="Scroll to top"
             >
               <Image src="/images/logo.png" alt="Logo" width={40} height={40} />
-            </div>
+            </button>
           </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -59,9 +60,10 @@ export default function Navbar() {
           <div className="-mr-2 flex md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              aria-expanded={isOpen}
+              aria-label={isOpen ? "Close main menu" : "Open main menu"}
             >
-              <span className="sr-only">Open main menu</span>
               {isOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (

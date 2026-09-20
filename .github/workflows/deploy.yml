@@ -1,4 +1,4 @@
-name: Deploy React + Vite to Github Pages
+name: Deploy Next.js to Github Pages
 
 on:
   workflow_dispatch:
@@ -13,13 +13,13 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Setup Nodejs
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       # Install Dependencies
       - name: Install Dependencies
@@ -28,10 +28,12 @@ jobs:
       # Build the project
       - name: Build project
         run: npm run build
+        env:
+          NODE_ENV: production
 
       # Deploy to Github pages
       - name: Deploy to github pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist
+          publish_dir: out
