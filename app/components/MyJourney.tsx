@@ -1,6 +1,9 @@
+"use client";
+
 import React from "react";
 import { EXPERIENCES, EDUCATION } from "../lib/constants";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 function TimelineItem({ item, index, isLast }: { item: any; index: number; isLast: boolean }) {
   return (
@@ -39,7 +42,13 @@ function TimelineItem({ item, index, isLast }: { item: any; index: number; isLas
 
         {/* Content Box */}
         <div className="w-full md:w-5/12 mt-4 md:mt-0">
-          <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 shadow-xl hover:border-gray-500 transition-colors">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            className="bg-gray-800/50 p-6 rounded-lg border border-gray-700 shadow-xl hover:border-gray-500 transition-colors"
+          >
             <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
             <h4 className="text-blue-400 font-medium mb-3">{item.subtitle}</h4>
             <div className="md:hidden mb-4 text-sm text-gray-400">
@@ -50,7 +59,7 @@ function TimelineItem({ item, index, isLast }: { item: any; index: number; isLas
                 <li key={i}>{desc}</li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
@@ -59,14 +68,28 @@ function TimelineItem({ item, index, isLast }: { item: any; index: number; isLas
 
 export default function MyJourney() {
   return (
-    <div id="journey" className="min-h-screen py-20 px-4">
+    <div id="journey" className="min-h-screen py-20 px-4 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold mb-16 text-center relative after:content-[''] after:block after:w-16 after:h-1 after:bg-blue-500 after:mx-auto after:mt-4">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5 }}
+          className="text-3xl md:text-5xl font-bold mb-16 text-center relative after:content-[''] after:block after:w-16 after:h-1 after:bg-blue-500 after:mx-auto after:mt-4"
+        >
           My Journey
-        </h2>
+        </motion.h2>
 
         <div className="mb-20">
-          <h3 className="text-2xl font-bold mb-10 text-center text-gray-300">Experience</h3>
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-2xl font-bold mb-10 text-center text-gray-300"
+          >
+            Experience
+          </motion.h3>
           <div className="relative">
             {EXPERIENCES.map((exp, index) => (
               <TimelineItem
@@ -80,7 +103,15 @@ export default function MyJourney() {
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold mb-10 text-center text-gray-300">Education</h3>
+          <motion.h3
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+            className="text-2xl font-bold mb-10 text-center text-gray-300"
+          >
+            Education
+          </motion.h3>
           <div className="relative">
             {EDUCATION.map((edu, index) => (
               <TimelineItem
