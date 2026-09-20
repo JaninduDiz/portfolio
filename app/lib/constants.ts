@@ -1,6 +1,3 @@
-import CodeScale from './assets/experience-education/codescale.svg'
-import Dharmaraja from './assets/experience-education/dharmaraja.svg'
-import SLIIT from './assets/experience-education/sliit-logo.svg'
 
 const LINKS = {
     resume: "https://drive.google.com/file/d/1iJi_IuHHX1OXqRAm-qVPAjYZq7aE7o0G/view?usp=sharing",
@@ -35,6 +32,17 @@ const BIO = {
 
 const EXPERIENCES = [
     {
+        title: "Software Engineer",
+        subtitle: "Lithic Labs Pvt Ltd, Colombo 3",
+        workDescription: [
+            "Contributing to frontend and backend software development",
+            "Working with modern tech stack",
+        ],
+        dateText: "19 Sept 2025 – Present",
+        icon: "",
+        bgColor: "rgb(18, 18, 18)"
+    },
+    {
         title: "Associate Software Engineer",
         subtitle: "CodeScale Pvt Ltd, Sri Lanka",
         workDescription: [
@@ -42,7 +50,7 @@ const EXPERIENCES = [
             "Collaborated effectively in a remote, agile work environment with cross-functional team members"
         ],
         dateText: "05/2024 – 02/2025",
-        icon: CodeScale,
+        icon: "/experience-education/codescale.svg",
         bgColor: "rgb(52, 56, 72)"
     },
     {
@@ -53,7 +61,7 @@ const EXPERIENCES = [
             "Collaborated in agile sprints with team members",
         ],
         dateText: "10/2023 – 04/2024",
-        icon: CodeScale,
+        icon: "/experience-education/codescale.svg",
         bgColor: "rgb(33, 83, 124)"
     },
 
@@ -65,7 +73,7 @@ const EDUCATION = [
         subtitle: "Sri Lanka Institute of Information Technology ",
         workDescription: ["Graduated with Honours", "Specialized in Software Engineering"],
         dateText: "2021 – 2024",
-        icon: SLIIT,
+        icon: "/experience-education/sliit-logo.svg",
         bgColor: "rgb(33, 83, 124)"
     },
     {
@@ -73,7 +81,7 @@ const EDUCATION = [
         subtitle: "Dharmaraja College, Kandy",
         workDescription: ["Combined Maths, Physics, ICT"],
         dateText: "2007 – 2020",
-        icon: Dharmaraja,
+        icon: "/experience-education/dharmaraja.svg",
         bgColor: "rgb(52, 56, 72)"
     },
 ];
